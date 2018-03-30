@@ -10,8 +10,7 @@ class Application
  
       resp.write song.artist
     else
-
-      
+      resp.write ""
     end
     
     resp.finish
