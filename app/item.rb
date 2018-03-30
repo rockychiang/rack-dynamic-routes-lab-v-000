@@ -12,4 +12,10 @@ class Item
   def self.all 
     @@items
   end
+  
+  def self.find(name)
+    self.all.find do |item|
+      item.name == name
+    end
+  end
 end
