@@ -9,6 +9,7 @@ class Application
       item = @@songs.find{|s| s.title == song_title}
  
       resp.write song.artist
+    else
 
       
     end
