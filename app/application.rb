@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
-    if req.match(/items/)
+    if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       item = @@songs.find{|s| s.title == song_title}
  
