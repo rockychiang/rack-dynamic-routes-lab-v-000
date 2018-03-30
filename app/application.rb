@@ -6,7 +6,7 @@ class Application
     
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      if Item.all.include?(item_name)
+      if item = Item.find(item_name)
         
    
         resp.write song.artist
