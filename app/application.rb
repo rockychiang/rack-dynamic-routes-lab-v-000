@@ -2,7 +2,7 @@ class Application
   
   def call(env)
     resp = Rack::Response.new
-    req = Rack::Require.new(env)
+    req = Rack::Request.new(env)
     
     if req.match(/items/)
       item_name = req.path.split("/items/").last
